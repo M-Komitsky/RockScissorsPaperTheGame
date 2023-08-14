@@ -5,7 +5,7 @@ public class RockScissorsPaper {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String input = "";
-        while (input.equals("End of the game")){
+        while (!input.equals("End of the game")){
             System.out.print("Choose [r]ock, [p]aper or [s]cissors: ");
             input = scanner.next();
             if(input.equals("r") || input.equals("rock")){
