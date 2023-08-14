@@ -4,10 +4,10 @@ import java.util.Scanner;
 public class RockScissorsPaper {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String input = "";
+        System.out.print("Choose [r]ock, [p]aper or [s]cissors: ");
+        input = scanner.nextLine();
         while (!input.equals("End of the game")){
-            System.out.print("Choose [r]ock, [p]aper or [s]cissors: ");
-            input = scanner.next();
+
             if(input.equals("r") || input.equals("rock")){
                 input = ROCK;
             }else if(input.equals("p") || input.equals("paper")){
@@ -16,7 +16,6 @@ public class RockScissorsPaper {
                 input = SCISSORS;
             }else{
                 System.out.println("Invalid input. Try again...");
-                return;
             }
             Random random = new Random();
             int computerRandomNumber = random.nextInt(3);
@@ -45,6 +44,8 @@ public class RockScissorsPaper {
             }else {
                 System.out.println("You lose");
             }
+            System.out.print("Choose [r]ock, [p]aper or [s]cissors: ");
+            input = scanner.nextLine();
         }
     }
     private static final String ROCK = "Rock";
